@@ -1,0 +1,66 @@
+/* Navbar styling (Final) */
+.navbar {
+  background-color: #474973; 
+  color: white; 
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.navbar-logo-group {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.navbar-logo-group img {
+    border-radius: 5px; 
+}
+
+.navbar-links {
+    text-align: right;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px; 
+}
+
+.navbar a:hover {
+  color: #ffb3b3;
+}
+
+/* MEDIA QUERY UNTUK RESPONSIF NAVBAR */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px; 
+    }
+
+    .navbar-logo-group {
+        width: 100%;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .navbar-links a {
+        margin: 0;
+        padding: 5px 0;
+    }
+}

@@ -1,0 +1,147 @@
+/* Dashboard.css — FINAL VERSION: RESPONSIVE + MODAL CARD BESAR */
+.dashboard {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(to bottom, #474973, #0D0C1D);
+  min-height: 100vh;
+  padding: 80px 0 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-content-wrapper {
+  max-width: 1200px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+/* Header & Carousel */
+.dashboard-header { text-align: center; margin-bottom: 50px; }
+.dashboard h1 { font-size: 3em; margin: 20px 0 10px; font-weight: 800; }
+.dashboard > .dashboard-content-wrapper > .dashboard-header > p { font-size: 1.3em; opacity: 0.9; }
+
+.carousel-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.dashboard-image { width: 100%; height: 520px; object-fit: cover; }
+.carousel-btn { 
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.6); color: white; border: none;
+  width: 50px; height: 50px; border-radius: 50%; font-size: 24px;
+  cursor: pointer; z-index: 10;
+}
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+/* Info Cards & Stats */
+.info-cards, .stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;              /* Jarak antar card lebih rapat & rapi */
+  margin-bottom: 60px;
+  flex-wrap: nowrap;      /* PAKSA TETAP 1 BARIS */
+  overflow-x: hidden;     /* Cegah scroll horizontal */
+}
+
+.info-card, .stat-card {
+  flex: 1;                /* Biar 3 card membagi rata ruang */
+  max-width: 360px;       /* Batasi lebar maksimal biar tidak melebar terlalu jauh */
+  min-width: 280px;       /* Minimal lebar biar tidak terlalu kecil */
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover { transform: translateY(-12px); }
+.info-icon { width: 60px; height: 60px; background: #f0f0f0; padding: 12px; border-radius: 12px; }
+.info-card h3 { font-size: 1.4em; margin: 15px 0 10px; color: #1e293b; }
+
+/* Stat Card */
+.stat-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+.stat-card p { font-size: 2.8em; font-weight: 900; }
+
+/* MODAL CARD BESAR — CANTIK & SCROLLABLE */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.92); display: flex; justify-content: center;
+  align-items: center; z-index: 9999; padding: 20px; overflow-y: auto;
+}
+
+.modal-card {
+  background: white; border-radius: 24px; max-width: 900px; width: 95%;
+  max-height: 90vh; overflow: hidden; box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+  position: relative; display: flex; flex-direction: column;
+}
+
+.modal-close-btn {
+  position: absolute; top: 18px; right: 20px; background: #dc2626; color: white;
+  width: 44px; height: 44px; border-radius: 50%; border: none; font-size: 22px;
+  cursor: pointer; z-index: 10;
+}
+
+.modal-card-header {
+  background: linear-gradient(135deg, #474973, #0D0C1D); color: white;
+  padding: 40px 30px 30px; text-align: center;
+}
+.modal-card-header h2 { margin: 0; font-size: 2.2rem; font-weight: 800; }
+
+.modal-card-body {
+  padding: 30px; flex: 1; overflow-y: auto; background: #f8fafc;
+  font-size: 1.1rem; line-height: 1.9;
+}
+.modal-text-content p { margin-bottom: 20px; text-align: justify; color: #0D0C1D;}
+.section-title { color: #3b82f6; font-size: 1.6em; margin: 30px 0 15px; font-weight: bold; }
+.visi-highlight { background: #dbeafe; padding: 25px; border-radius: 16px; font-size: 1.4rem; font-weight: bold; color: #1e40af; text-align: center; border-left: 6px solid #3b82f6; margin: 30px 0; }
+.history-timeline, .misi-list { background: white;color: #0D0C1D; padding: 22px; border-radius: 16px; margin: 25px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.history-timeline li, .misi-list li { margin: 14px 0; padding-left: 5px; position: relative; }
+.history-timeline li::before { content: "▹"; color: #3b82f6; font-weight: bold; margin-right: 10px; }
+
+/* .requirements-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px; margin: 25px 0;
+  color: black;
+}
+
+.requirements-grid > div {
+  background: #b6e9ff; padding: 20px;color: #0D0C1D; border-radius: 16px; text-align: center;
+  font-weight: 600; font-size: 1.05rem; border: 2px solid #86b3ef;
+  box-shadow: 0 6px 20px rgba(34,197,94,0.1);
+} */
+
+.persyaratan-container{
+  color: black;
+}
+
+.modal-card-footer {
+  padding: 20px; text-align: center; background: #f1f5f9;
+}
+.modal-close-text {
+  background: #474973; color: white; border: none; padding: 14px 50px;
+  border-radius: 50px; font-size: 1.1rem; font-weight: bold; cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+  .info-cards, .stats { flex-direction: column; align-items: center; }
+  .info-card, .stat-card { width: 80%; max-width: 500px; }
+  .dashboard-image { height: 380px; }
+}
+@media (max-width: 600px) {
+  .dashboard h1 { font-size: 2.2em; }
+  .dashboard-image { height: 280px; }
+  .modal-card-header h2 { font-size: 1.8rem; }
+  .modal-card-body { padding: 25px 20px; }
+}

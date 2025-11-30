@@ -1,0 +1,25 @@
+.courses {
+text-align: center;
+  padding: 40px;
+  background: linear-gradient(to bottom, #474973, #0D0C1D); 
+}
+
+.courses h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.courses p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.course-list {
+  display: grid;
+  /* Membuat card responsif (min 300px) dan seragam */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
